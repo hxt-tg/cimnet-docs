@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CimNet 使用说明 &mdash; CimNet 0.1.3 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="CimNet 参考文档" href="reference/intro.html" />
+    <link rel="prev" title="安装 CimNet" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #d44a1c" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CimNet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">文档目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装 CimNet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CimNet 使用说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#file-structure">文件结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-net">使用网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-net">1. 创建网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-structure">2. 编辑网络结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#store-data">3. 存储节点/边数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-copy">4. 网络拷贝和转换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-loop">5. 网络数据和遍历</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implemented-structure">6. 已实现的网络结构</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/intro.html">CimNet 参考文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about-cpp.html">关于 C++ 语言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits-license.html">开发者协议</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CimNet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>CimNet 使用说明</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cimnet">
+<span id="cimnet-usage"></span><h1>CimNet 使用说明<a class="headerlink" href="#cimnet" title="永久链接至标题">¶</a></h1>
+<p>如果你之前编写过 C 语言，但是从未接触过 C++ 语言，或者不了解 <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 标准的新特性，可以跳转到章节“<a class="reference internal" href="about-cpp.html#cimnet-about-cpp"><span class="std std-ref">关于 C++ 语言</span></a>”快速了解 CimNet 使用的语言特性。</p>
+<div class="section" id="file-structure">
+<span id="id1"></span><h2>文件结构<a class="headerlink" href="#file-structure" title="永久链接至标题">¶</a></h2>
+<p>CimNet 工具包含于 <code class="file docutils literal notranslate"><span class="pre">cimnet</span></code> 文件夹内，由以下文件组成：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>文件</p></th>
+<th class="head"><p>内容概述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="file docutils literal notranslate"><span class="pre">cimnet/_types.h</span></code></p></td>
+<td><p>基础数据类型</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="file docutils literal notranslate"><span class="pre">cimnet/_exception.h</span></code></p></td>
+<td><p>网络异常类</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="file docutils literal notranslate"><span class="pre">cimnet/_base_net.h</span></code></p></td>
+<td><p>通用无向/有向网络类</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="file docutils literal notranslate"><span class="pre">cimnet/network.h</span></code></p></td>
+<td><p>已实现的常用网络结构</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="file docutils literal notranslate"><span class="pre">cimnet/random.h</span></code></p></td>
+<td><p>MT随机数生成</p></td>
+</tr>
+</tbody>
+</table>
+<p>一般情况下，你只需要引用 <code class="file docutils literal notranslate"><span class="pre">cimnet/network.h</span></code> 这个头文件，就可以使用默认的基础数据类型、网络异常类和有向/无向通用网络类。已实现的常用网络结构全部继承于通用无向网络，网络的节点编号类型为整型。</p>
+<p>如果你想使用优秀的<a class="reference internal" href="reference/rng.html#reference-rng"><span class="std std-ref">随机数生成器</span></a>，可以引用 <code class="file docutils literal notranslate"><span class="pre">cimnet/random.h</span></code> ，也可以使用 C++ 标准库中的随机数函数。</p>
+</div>
+<div class="section" id="use-net">
+<span id="id2"></span><h2>使用网络<a class="headerlink" href="#use-net" title="永久链接至标题">¶</a></h2>
+<div class="section" id="create-net">
+<span id="id3"></span><h3>1. 创建网络<a class="headerlink" href="#create-net" title="永久链接至标题">¶</a></h3>
+<p>你可以用下面的语句创建一个不含任何点边的空的无向网络：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Network</span><span class="o">&lt;&gt;</span> <span class="n">net</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>这个网络用 <a class="reference internal" href="reference/types.html#_CPPv42Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a> 类型作为节点编号的标识（见 CimNet 接口的<a class="reference internal" href="reference/types.html#reference-types"><span class="std std-ref">基本数据类型</span></a>）。每个节点的编号应该互不相同。创建一个空的有向网络：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DirectedNetwork</span><span class="o">&lt;&gt;</span> <span class="n">net</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>你也可以指定自己节点类型：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Network</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">net</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>这样一来，在网络 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 中你可以使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span></code> 来唯一标识一个节点。</p>
+</div>
+<div class="section" id="edit-structure">
+<span id="id4"></span><h3>2. 编辑网络结构<a class="headerlink" href="#edit-structure" title="永久链接至标题">¶</a></h3>
+<p>你可以向网络中添加节点：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>网络中就增加了一个以 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">1</span></code> 为编号的节点。如果你指定了节点编号类型为 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span></code> ，也可以用以下方式添加节点：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>你可以使用 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network8has_nodeERK4_NId" title="Network::has_node"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_node(id)</span></code></a> 方法判断网络中是否有以 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 为编号的节点，以上面的网络为例，下列语句：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">net</span><span class="p">.</span><span class="n">has_node</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">net</span><span class="p">.</span><span class="n">has_node</span><span class="p">(</span><span class="s">&quot;Not existed&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>会打印</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>true
+false
+</pre></div>
+</div>
+<p>两个节点间的连接关系称为边。向网络中添加一条边：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>如果网络 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 为无向网络，可以使用 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network8has_edgeERK4_NIdRK4_NId" title="Network::has_edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_edge(id1,</span> <span class="pre">id2)</span></code></a> 方法判断网络中是否存在边， <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> 的位置可以调换。你也可以使用 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network11is_neighborERK4_NIdRK4_NId" title="Network::is_neighbor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">is_neighbor(id1,</span> <span class="pre">id2)</span></code></a> 判断网络中 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> 与 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> 是否为邻居节点，它的作用和 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network8has_edgeERK4_NIdRK4_NId" title="Network::has_edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_edge</span></code></a> 是一样的。</p>
+<p>如果网络 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 为有向网络，可以使用 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork13has_successorERK4_NIdRK4_NId" title="DirectedNetwork::has_successor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_successor(id1,</span> <span class="pre">id2)</span></code></a> 判断节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> 是否存在后继节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> ，使用 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork15has_predecessorERK4_NIdRK4_NId" title="DirectedNetwork::has_predecessor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_predecessor(id1,</span> <span class="pre">id2)</span></code></a> 判断节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> 是否存在前序节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> 。有向网络也有 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork8has_edgeERK4_NIdRK4_NId" title="DirectedNetwork::has_edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_edge</span></code></a> 方法，它和 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork13has_successorERK4_NIdRK4_NId" title="DirectedNetwork::has_successor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_successor</span></code></a> 方法是等效的。有向网络的 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork11is_neighborERK4_NIdRK4_NId" title="DirectedNetwork::is_neighbor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">is_neighbor(id1,</span> <span class="pre">id2)</span></code></a> 方法在 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> 之间存在连边（无论是 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> 指向 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> 或 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id2</span></code> 指向 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id1</span></code> ）时返回 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">true</span></code> 。如果有向网络 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 中存在一条以节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">1</span></code> 指向节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">2</span></code> 的边，下列表达式：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">has_successor</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">net</span><span class="p">.</span><span class="n">has_predecessor</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">net</span><span class="p">.</span><span class="n">has_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">net</span><span class="p">.</span><span class="n">is_neighbor</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">net</span><span class="p">.</span><span class="n">is_neighbor</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>的值均为 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">true</span></code> 。</p>
+</div>
+<div class="section" id="store-data">
+<span id="id5"></span><h3>3. 存储节点/边数据<a class="headerlink" href="#store-data" title="永久链接至标题">¶</a></h3>
+<p>在存储数据前需要在模板类处指定存储的数据类型。我们定义如下两种类型：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">NodeDescribe</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">amount</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">weight</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">EdgeDetail</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>并且以这种方式声明网络，并添加一条边：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Network</span><span class="o">&lt;</span><span class="n">Id</span><span class="p">,</span> <span class="n">NodeDescribe</span><span class="p">,</span> <span class="n">EdgeDetail</span><span class="o">&gt;</span> <span class="n">net</span><span class="p">;</span>
+<span class="n">net</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>网络中便有了两个点和一条边。接下来你可以这样在网络的节点中添加数据：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">node</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s">&quot;First node&quot;</span><span class="p">;</span>
+<span class="n">net</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Second node;</span>
+</pre></div>
+</div>
+<p>上面两个语句都能用来添加数据。第一条语句使用 <a class="reference internal" href="reference/network.html#_CPPv4N7Network4nodeERK4_NId" title="Network::node"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">node(id)</span></code></a> 方法返回了节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 存储的引用，这使得你可以通过引用修改内部存储。网络类也提供了下标的方式返回节点引用（即第二条语句所示），这使得你可以更方便地存取网络节点的数据。在网络的边上添加数据也可以通过类似的方式：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">};</span>
+<span class="n">net</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">};</span>
+</pre></div>
+</div>
+<p>同理，第一条语句使用调用函数的形式访问边数据的引用，第二条语句是一种更简便的方式——它重载了这个类的括号操作符。当然，由于 <a class="reference internal" href="reference/network.html#_CPPv4N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">edge(id1,</span> <span class="pre">id2)</span></code></a> 方法返回的是 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">EdgeDetail</span></code> 结构体的引用，你可以使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">.</span></code> 直接修改内部成员：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="n">amount</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">net</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="n">amount</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>点数据和边数据都能存储其它任意的你定义过的类的对象，但是每个点之间或每条边之间存储的类型要一致。</p>
+<p>在添加节点和边的方法里也可以直接添加数据：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;First node&quot;</span><span class="p">);</span>
+<span class="n">net</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;Second node&quot;</span><span class="p">);</span>
+<span class="n">net</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="network-copy">
+<span id="id6"></span><h3>4. 网络拷贝和转换<a class="headerlink" href="#network-copy" title="永久链接至标题">¶</a></h3>
+<p>CimNet 提供拷贝构造器完成网络的拷贝操作。你可以将一个网络及其内部数据完全复制给另一个网络，此后前一个网络的修改不影响拷贝后的网络数据。只需要将原始网络作为参数传入新网络的初始化参数列表中即可。</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Network</span><span class="o">&lt;</span><span class="n">Id</span><span class="p">,</span> <span class="n">NodeDescribe</span><span class="p">,</span> <span class="n">EdgeDetail</span><span class="o">&gt;</span> <span class="n">net</span><span class="p">;</span>
+<span class="c1">// Add nodes and edges to net</span>
+<span class="n">Network</span><span class="o">&lt;</span><span class="n">Id</span><span class="p">,</span> <span class="n">NodeDescribe</span><span class="p">,</span> <span class="n">EdgeDetail</span><span class="o">&gt;</span> <span class="n">net_copy</span><span class="p">(</span><span class="n">net</span><span class="p">);</span>
+<span class="n">DirectedNetwork</span><span class="o">&lt;</span><span class="n">Id</span><span class="p">,</span> <span class="n">NodeDescribe</span><span class="p">,</span> <span class="n">EdgeDetail</span><span class="o">&gt;</span> <span class="n">di_net_copy</span><span class="p">(</span><span class="n">net</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>需要注意拷贝网络的模板参数需要保持一致，它的类既可以是 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 也可以是 <a class="reference internal" href="reference/di_network.html#_CPPv4I000E15DirectedNetwork" title="DirectedNetwork"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DirectedNetwork</span></code></a> 。如果原网络是无向网络且新网络是有向网络，所有无向边会转化成两条有向且指向相反的连边。如果将有向网络拷贝为无向网络，所有的有向边失去方向，变为无向边；双向边则会变为一条无向边。</p>
+</div>
+<div class="section" id="network-loop">
+<span id="id7"></span><h3>5. 网络数据和遍历<a class="headerlink" href="#network-loop" title="永久链接至标题">¶</a></h3>
+<p>在无向网络中使用 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network6degreeERK4_NId" title="Network::degree"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">degree(id)</span></code></a> 方法可以获知节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 的度。在有向网络中， <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork9in_degreeERK4_NId" title="DirectedNetwork::in_degree"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">in_degree(id)</span></code></a> 返回节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 的入度， <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork10out_degreeERK4_NId" title="DirectedNetwork::out_degree"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">out_degree(id)</span></code></a> 返回节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 的出度， <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork6degreeERK4_NId" title="DirectedNetwork::degree"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">degree(id)</span></code></a> 返回了入度和出度的和。</p>
+<p><a class="reference internal" href="reference/network.html#_CPPv4NK7Network15number_of_nodesEv" title="Network::number_of_nodes"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">number_of_nodes()</span></code></a> 方法会返回网络的节点数量， <a class="reference internal" href="reference/network.html#_CPPv4NK7Network15number_of_edgesEv" title="Network::number_of_edges"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">number_of_edges()</span></code></a> 方法会返回网络边的数量。 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network12total_degreeEv" title="Network::total_degree"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">total_degree()</span></code></a> 方法会返回网络的总度数，它从数值上等于网络总边数的两倍。</p>
+<p>你也可以直接使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">cout</span></code> 输出流打印网络信息：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">net</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>它会简要打印网络的节点数、边数和总度数信息。</p>
+<p>调用 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network5nodesEv" title="Network::nodes"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">nodes()</span></code></a> 方法可以获取网络中所有的节点编号（ <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">NodeId</span><span class="pre">&gt;</span></code> ）， <a class="reference internal" href="reference/network.html#_CPPv4NK7Network5edgesEv" title="Network::edges"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">edges()</span></code></a> 方法可以获取网络中所有的边，它是一个点对的集合容器（ <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">unordered_set</span><span class="pre">&lt;</span><span class="pre">std</span><span class="pre">::</span><span class="pre">pair</span><span class="pre">&lt;</span><span class="pre">NodeId</span><span class="pre">,</span> <span class="pre">NodeId</span><span class="pre">&gt;</span><span class="pre">&gt;</span></code> ）。 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network9neighborsERK4_NId" title="Network::neighbors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">neighbors(id)</span></code></a> 返回节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 的所有邻居（ <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">NodeId</span><span class="pre">&gt;</span></code> ）。可以参考下面的方式遍历网络和邻居的节点编号：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">node</span> <span class="p">:</span> <span class="n">net</span><span class="p">.</span><span class="n">nodes</span><span class="p">())</span>
+    <span class="c1">// Visit node</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">edge</span> <span class="p">:</span> <span class="n">net</span><span class="p">.</span><span class="n">edges</span><span class="p">())</span>
+    <span class="c1">// Visit edge.first and edge.second</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">neighbor</span> <span class="p">:</span> <span class="n">net</span><span class="p">.</span><span class="n">neighbors</span><span class="p">())</span>
+    <span class="c1">// Visit neighbor</span>
+</pre></div>
+</div>
+<p>其中由于边 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span></code> 是 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">pair</span><span class="pre">&lt;</span><span class="pre">NodeId</span><span class="pre">,</span> <span class="pre">NodeId</span><span class="pre">&gt;</span></code> 类型， <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 中需要用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">first</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">second</span></code> 访问一条边中的两个节点编号。对于无向网络而言， <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">first</span></code> 是一条边中较小的一个节点编号（数值较小或字符串字母序靠前的）；有向网络中 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">first</span></code> 是前序节点， <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">second</span></code> 是后继节点。</p>
+<p>（如果你支持 <code class="docutils literal notranslate"><span class="pre">C++17</span></code> 及以上的编译环境，可以尝试将循环替换为 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">for</span> <span class="pre">(auto</span> <span class="pre">&amp;[i,</span> <span class="pre">j]</span> <span class="pre">:</span> <span class="pre">net.edges())</span></code> ，其中 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">i</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">j</span></code> 等效于 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">first</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">edge</span><span class="pre">.</span><span class="pre">second</span></code> 。）</p>
+<p>另外，对于无向网络而言， <a class="reference internal" href="reference/network.html#_CPPv4NK7Network9neighborsERK4_NId" title="Network::neighbors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">neighbors(id)</span></code></a> 返回了节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 所有相邻节点编号。对于有向网络而言， <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork9neighborsERK4_NId" title="DirectedNetwork::neighbors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">neighbors(id)</span></code></a> 返回了所有与节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 有关联（无论方向）的节点编号。有向网络还提供了 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork12predecessorsERK4_NId" title="DirectedNetwork::predecessors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">predecessors(id)</span></code></a> 方法用来返回节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 的所有前序节点编号， <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork10successorsERK4_NId" title="DirectedNetwork::successors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">successors()</span></code></a> 方法用来返回节点 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">id</span></code> 的所有后继节点编号，它们的遍历方式与 <a class="reference internal" href="reference/di_network.html#_CPPv4NK15DirectedNetwork9neighborsERK4_NId" title="DirectedNetwork::neighbors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">neighbors(id)</span></code></a> 类似。</p>
+</div>
+<div class="section" id="implemented-structure">
+<span id="id8"></span><h3>6. 已实现的网络结构<a class="headerlink" href="#implemented-structure" title="永久链接至标题">¶</a></h3>
+<p>目前所有已实现的网络结构都是模板类，且节点编号都是 <a class="reference internal" href="reference/types.html#_CPPv42Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a> 类型的——所以模板只接受两个模板参数， <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">NodeData</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">EdgeData</span></code> ，它们默认都是 <a class="reference internal" href="reference/types.html#_CPPv44None" title="None"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">None</span></code></a> 。这些网络的用法和通用网络类型基本一致，只是初始化时需要传入指定的参数。这里给出一个较为完整的程序实例：构建一个包含10个节点的规则网络，这个网络的每个节点都和周围6个邻居连边（即，每个节点向顺时针方向的3个邻居添加连边）。最后我们打印网络信息和一号节点的邻居节点编号。</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="cp">#include</span> <span class="cpf">&quot;cimnet/network.h&quot;</span><span class="cp"></span>
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">    <span class="n">RegularNetwork</span><span class="o">&lt;&gt;</span> <span class="n">net</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</span>    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">net</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Neighbors of node 1: &quot;</span><span class="p">;</span>
+<span class="hll">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">n</span> <span class="p">:</span> <span class="n">net</span><span class="p">.</span><span class="n">neighbors</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</span>        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>这段代码的第1行引用了网络结构的头文件。第4行用模板类定义了<a class="reference internal" href="reference/impl-networks.html#regular-network"><span class="std std-ref">规则网络</span></a> <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> ，第7行遍历了网络中1号节点的邻居，变量 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">n</span></code> 的值为每次遍历到的一个邻居节点的编号。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reference/intro.html" class="btn btn-neutral float-right" title="CimNet 参考文档" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="安装 CimNet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, @hxt-tg
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
