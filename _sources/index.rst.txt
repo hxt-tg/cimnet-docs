@@ -16,6 +16,10 @@ CimNet - C++ 复杂网络工具包
 
 CimNet 是一个纯 C++ 实现的复杂网络库，它基于 ``C++11`` 标准的语法编写。
 
+GitHub： https://github.com/hxt-tg/cimnet
+
+CimNet 开发文档网页版：https://hxt-tg.github.io/cimnet-docs
+
 CimNet 支持以下特性：
 
 - 提供了十分易用的方式创建和编辑网络
