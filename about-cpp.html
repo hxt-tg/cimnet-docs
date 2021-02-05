@@ -1,18 +1,15 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>关于 C++ 语言 &mdash; CimNet 0.1.3 文档</title>
+  <title>关于 C++ 语言 &mdash; CimNet 0.1.4 文档</title>
   
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
   
   
@@ -20,22 +17,33 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/translations.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.1.4',
+              LANGUAGE:'zh_CN',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="开发者协议" href="credits-license.html" />
@@ -53,7 +61,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CimNet
+            <a href="index.html" class="icon icon-home"> CimNet
           
 
           
@@ -71,7 +79,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +88,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -107,7 +114,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -146,7 +152,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>关于 C++ 语言</li>
     
@@ -172,18 +178,18 @@
 <span id="id1"></span><h2>面向对象<a class="headerlink" href="#object-oriented" title="永久链接至标题">¶</a></h2>
 <p>大多数支持面向对象编程的语言拥有四大特性——封装，抽象，继承，多态。</p>
 <p>封装和抽象保证了程序模块和模块之间的高度独立和易用。在你使用这个对象的时候，可以不必关心对象的实现细节，使你更加关注程序其他部分的逻辑。你可以使用更加表意的方式修改对象数据，并且保证数据修改的可靠和合理。</p>
-<p>在 CimNet 中， <code class="file docutils literal notranslate"><span class="pre">cimnet/network.h</span></code> 中所有网络类都继承于 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 类，这意味着你可以在例如 <a class="reference internal" href="reference/impl-networks.html#_CPPv4I00E14RegularNetwork" title="RegularNetwork"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">RegularNetwork</span></code></a> 的对象中访问 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 的方法。其中 <a class="reference internal" href="reference/impl-networks.html#_CPPv4I00E14RegularNetwork" title="RegularNetwork"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">RegularNetwork</span></code></a> 称为子类， <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 称为父类或基类。</p>
+<p>在 CimNet 中， <code class="file docutils literal notranslate"><span class="pre">cimnet/network.h</span></code> 中所有网络类都继承于 <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 类，这意味着你可以在例如 <a class="reference internal" href="reference/impl-networks.html#_CPPv3I00E14RegularNetwork" title="RegularNetwork"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">RegularNetwork</span></code></a> 的对象中访问 <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 的方法。其中 <a class="reference internal" href="reference/impl-networks.html#_CPPv3I00E14RegularNetwork" title="RegularNetwork"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">RegularNetwork</span></code></a> 称为子类， <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 称为父类或基类。</p>
 </div>
 <div class="section" id="instantiation-and-template-class">
 <span id="id2"></span><h2>实例化与模板类<a class="headerlink" href="#instantiation-and-template-class" title="永久链接至标题">¶</a></h2>
-<p>在 C++ 中，一个类可以实例化一个对象，每一个对象都能访问这个类中的方法，但是对象与对象之间的大部分数据并不共通。所谓方法就是函数，不过这个函数只能针对特定类实例化的对象来调用。你可以使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">ClassName</span> <span class="pre">var;</span></code> 来实例化对象 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">var</span></code> ，使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">var.method(params,</span> <span class="pre">...)</span></code> 来调用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">ClassName</span></code> 的方法。</p>
-<p>C++ 提供了一种更加高级的方式来实现一些功能相似但数据类型不一致的类，即模板类。模板类所实现类需要指定一些模板参数，这些模板参数就是指定的数据类型。模板类里会实现针对给定模板参数的属性和方法。使用模板类的语法是在类名后加尖括号，即 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">ClassName&lt;ClassParams,</span> <span class="pre">...&gt;</span></code> ，并且用这个模板类实例化所需的对象。这里有一个语法陷阱，如果你想使用一个全部取默认的模板参数的模板类，在 <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 的标准下类名后的尖括号是不能省略的，即 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">ClassName</span><span class="pre">&lt;</span><span class="pre">&gt;</span></code> 。</p>
-<p>以 CimNet 的 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 为例：</p>
+<p>在 C++ 中，一个类可以实例化一个对象，每一个对象都能访问这个类中的方法，但是对象与对象之间的大部分数据并不共通。所谓方法就是函数，不过这个函数只能针对特定类实例化的对象来调用。你可以使用 <code class="docutils literal notranslate"></code> 来实例化对象 <code class="docutils literal notranslate"><span class="pre">var</span></code> ，使用 <code class="docutils literal notranslate"></code> 来调用 <code class="docutils literal notranslate"><span class="pre">ClassName</span></code> 的方法。</p>
+<p>C++ 提供了一种更加高级的方式来实现一些功能相似但数据类型不一致的类，即模板类。模板类所实现类需要指定一些模板参数，这些模板参数就是指定的数据类型。模板类里会实现针对给定模板参数的属性和方法。使用模板类的语法是在类名后加尖括号，即 <code class="docutils literal notranslate"><span class="pre">ClassName</span><span class="pre">&lt;</span><span class="pre">ClassParams</span><span class="pre">,</span> <span class="pre">...</span><span class="pre">&gt;</span></code> ，并且用这个模板类实例化所需的对象。这里有一个语法陷阱，如果你想使用一个全部取默认的模板参数的模板类，在 <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 的标准下类名后的尖括号是不能省略的，即 <code class="docutils literal notranslate"><span class="pre">ClassName</span><span class="pre">&lt;</span><span class="pre">&gt;</span></code> 。</p>
+<p>以 CimNet 的 <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 为例：</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Network</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;</span> <span class="n">net</span><span class="p">;</span>
 <span class="n">net</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>上例中第一行实例化了一个 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 类的空实例 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">n</span></code> ，这个模板类接受了三个模板参数。第二行调用了 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 中的 <a class="reference internal" href="reference/network.html#_CPPv4N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData" title="Network::add_edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">add_edge</span></code></a> 方法来修改网络 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> ，你不能直接修改实现网络的数据结构，只能通过提供的接口来访问内部的数据结构，这些接口会保证进行的修改是合理有效的，一定程度上保证了网络不会出现意外的错误。</p>
+<p>上例中第一行实例化了一个 <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 类的空实例 <code class="docutils literal notranslate"><span class="pre">n</span></code> ，这个模板类接受了三个模板参数。第二行调用了 <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 中的 <a class="reference internal" href="reference/network.html#_CPPv3N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData" title="Network::add_edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">add_edge</span></code></a> 方法来修改网络 <code class="docutils literal notranslate"><span class="pre">net</span></code> ，你不能直接修改实现网络的数据结构，只能通过提供的接口来访问内部的数据结构，这些接口会保证进行的修改是合理有效的，一定程度上保证了网络不会出现意外的错误。</p>
 </div>
 <div class="section" id="pointer-and-reference">
 <span id="id3"></span><h2>对象的指针与引用<a class="headerlink" href="#pointer-and-reference" title="永久链接至标题">¶</a></h2>
@@ -194,7 +200,7 @@
 <span class="k">delete</span> <span class="n">n</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">typedef</span></code> 语句来简化对模板类的表达。程序的第二行实例化了一个 <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 对象，分配了它的内存空间，初始化它为一个空的网络，并把它的地址赋值给指针变量 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 。 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">new</span> <span class="pre">ClassName(params,</span> <span class="pre">...)</span></code> 后的初始化参数列表可以省略，它会在初始化的时候调用默认构造器。指针变量的方法使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">-&gt;</span></code> 而不是 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">.</span></code> 访问。最后使用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">delete</span></code> 语句释放 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 的内存。需要注意的是，你要保证程序逻辑里的每一个被 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">new</span></code> 创建的对象都被 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">delete</span></code> 释放，不然会造成大量内存泄漏。</p>
+<p>使用 <code class="docutils literal notranslate"></code> 语句来简化对模板类的表达。程序的第二行实例化了一个 <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 对象，分配了它的内存空间，初始化它为一个空的网络，并把它的地址赋值给指针变量 <code class="docutils literal notranslate"><span class="pre">net</span></code> 。 <code class="docutils literal notranslate"></code> 后的初始化参数列表可以省略，它会在初始化的时候调用默认构造器。指针变量的方法使用 <code class="docutils literal notranslate"></code> 而不是 <code class="docutils literal notranslate"></code> 访问。最后使用 <code class="docutils literal notranslate"></code> 语句释放 <code class="docutils literal notranslate"><span class="pre">net</span></code> 的内存。需要注意的是，你要保证程序逻辑里的每一个被 <code class="docutils literal notranslate"></code> 创建的对象都被 <code class="docutils literal notranslate"></code> 释放，不然会造成大量内存泄漏。</p>
 <p>如果你需要在函数间传递对象，又要避免参数拷贝浪费的时间，建议使用引用。引用可以让你像使用原始变量一样使用引用变量，同时不会占用额外空间和拷贝时间——你修改的就是原始变量。某种意义上，引用变量是原始变量的一个别名。</p>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -231,19 +237,19 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>程序用两种方式定义了打印网络总度数的函数。参数列表前的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">const</span></code> 保证变量不会在函数内部被改变。两个函数参数中的变量 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> 都指代 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">main</span></code> 函数里的网络变量 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">net</span></code> ，都不会对整个变量进行拷贝，只不过一种是用指针方式，一种是用引用方式。你可以从这个例子中感受这两种方式的差异。</p>
+<p>程序用两种方式定义了打印网络总度数的函数。参数列表前的 <code class="docutils literal notranslate"></code> 保证变量不会在函数内部被改变。两个函数参数中的变量 <code class="docutils literal notranslate"><span class="pre">net</span></code> 都指代 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数里的网络变量 <code class="docutils literal notranslate"><span class="pre">net</span></code> ，都不会对整个变量进行拷贝，只不过一种是用指针方式，一种是用引用方式。你可以从这个例子中感受这两种方式的差异。</p>
 </div>
 <div class="section" id="looping-on-stl">
 <span id="id4"></span><h2>标准容器类的遍历<a class="headerlink" href="#looping-on-stl" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">C++11</span></code> 提供了大量模板容器类便于你存储各种结构的数据，我们以最常用的一种容器介绍 <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 的语言特性。</p>
-<p><code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span></code> 是标准库提供的一种动态数组容器，以下是一个使用的例子：</p>
+<p><code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span></code> 是标准库提供的一种动态数组容器，以下是一个使用的例子：</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">;</span>
 <span class="n">array</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Data 1&quot;</span><span class="p">);</span>
 <span class="n">array</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Data 2&quot;</span><span class="p">);</span>
 <span class="n">array</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Data 3&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span><span class="pre">&gt;</span></code> 表示这个容器是用来装字符串类型的。 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">array</span></code> 中依次插入了三个字符串。你可以用 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">array</span><span class="pre">[</span><span class="pre">2</span><span class="pre">]</span></code> 访问字符串 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">&quot;Data</span> <span class="pre">3&quot;</span></code> 。如果你想遍历这个容器，常用的方式是这样：</p>
+<p><code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span><span class="pre">&gt;</span></code> 表示这个容器是用来装字符串类型的。 <code class="docutils literal notranslate"><span class="pre">array</span></code> 中依次插入了三个字符串。你可以用 <code class="docutils literal notranslate"><span class="pre">array</span><span class="pre">[</span><span class="pre">2</span><span class="pre">]</span></code> 访问字符串 <code class="docutils literal notranslate"><span class="pre">&quot;Data</span> <span class="pre">3&quot;</span></code> 。如果你想遍历这个容器，常用的方式是这样：</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
@@ -253,7 +259,7 @@
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>与 C 语言中的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">auto</span></code> 不同， C++ 的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">auto</span></code> 表达的是对此处变量类型的推导。也就是此处不需要显示指明变量 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">s</span></code> 的类型，编译器可以自行推导。与上文介绍的引用变量一样，这里的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">s</span></code> 也是引用，是容器内存储元素的引用，它在遍历过程中也可以不占用额外空间地快速访问 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">array</span></code> 中的元素。（事实上这种遍历方式是通过访问容器迭代器 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">_Type</span><span class="pre">&gt;</span><span class="pre">::</span><span class="pre">iterator</span></code> 实现的，它是 <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 的一个协议式语法糖，不过这里不再讨论其实现细节，只需要知道这种遍历方式十分方便即可。） <a class="reference internal" href="reference/network.html#_CPPv4I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 类中的 <a class="reference internal" href="reference/network.html#_CPPv4NK7Network9neighborsERK4_NId" title="Network::neighbors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">neighbors(NodeId</span> <span class="pre">id)</span></code></a> 方法返回的就是一个 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">NodeId</span><span class="pre">&gt;</span></code> ，你可以用一个新的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span></code> 接住这个返回值，也可以用它直接遍历：</p>
+<p>与 C 语言中的 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 不同， C++ 的 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 表达的是对此处变量类型的推导。也就是此处不需要显示指明变量 <code class="docutils literal notranslate"><span class="pre">s</span></code> 的类型，编译器可以自行推导。与上文介绍的引用变量一样，这里的 <code class="docutils literal notranslate"><span class="pre">s</span></code> 也是引用，是容器内存储元素的引用，它在遍历过程中也可以不占用额外空间地快速访问 <code class="docutils literal notranslate"><span class="pre">array</span></code> 中的元素。（事实上这种遍历方式是通过访问容器迭代器 <code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">_Type</span><span class="pre">&gt;</span><span class="pre">::</span><span class="pre">iterator</span></code> 实现的，它是 <code class="docutils literal notranslate"><span class="pre">C++11</span></code> 的一个协议式语法糖，不过这里不再讨论其实现细节，只需要知道这种遍历方式十分方便即可。） <a class="reference internal" href="reference/network.html#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 类中的 <a class="reference internal" href="reference/network.html#_CPPv3NK7Network9neighborsERK4_NId" title="Network::neighbors"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">neighbors(NodeId</span> <span class="pre">id)</span></code></a> 方法返回的就是一个 <code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">NodeId</span><span class="pre">&gt;</span></code> ，你可以用一个新的 <code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span></code> 接住这个返回值，也可以用它直接遍历：</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">neighbor</span> <span class="p">:</span> <span class="n">net</span><span class="p">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">id</span><span class="p">))</span>
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">neighbor</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
@@ -270,7 +276,7 @@
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>你可以将上面的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">MyNetwork</span></code> 替换为你的网络类名，在 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">NodeId</span></code> ， <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">NodeData</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">EdgeData</span></code> 处分别填写网络中存储的 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">节点编号类型</span></code> ， <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">节点数据</span></code> 和 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">边数据</span></code> 。在 <code class="xref cpp cpp-expr docutils literal notranslate"><span class="pre">//</span> <span class="pre">Implementation</span></code> 处编写网络的具体实现。如果你需要编写一个带模板语法的继承，或是在子类中添加独有的属性和方法，可以学习参考 <code class="file docutils literal notranslate"><span class="pre">cimnet/network.h</span></code> 中的实现或联系开发者。</p>
+<p>你可以将上面的 <code class="docutils literal notranslate"><span class="pre">MyNetwork</span></code> 替换为你的网络类名，在 <code class="docutils literal notranslate"><span class="pre">NodeId</span></code> ， <code class="docutils literal notranslate"><span class="pre">NodeData</span></code> 和 <code class="docutils literal notranslate"><span class="pre">EdgeData</span></code> 处分别填写网络中存储的 <code class="docutils literal notranslate"></code> ， <code class="docutils literal notranslate"></code> 和 <code class="docutils literal notranslate"></code> 。在 <code class="docutils literal notranslate"></code> 处编写网络的具体实现。如果你需要编写一个带模板语法的继承，或是在子类中添加独有的属性和方法，可以学习参考 <code class="file docutils literal notranslate"><span class="pre">cimnet/network.h</span></code> 中的实现或联系开发者。</p>
 </div>
 </div>
 
@@ -282,10 +288,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="credits-license.html" class="btn btn-neutral float-right" title="开发者协议" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="credits-license.html" class="btn btn-neutral float-right" title="开发者协议" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="reference/impl-networks.html" class="btn btn-neutral float-left" title="常用网络" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="reference/impl-networks.html" class="btn btn-neutral float-left" title="常用网络" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -294,19 +300,11 @@
 
   <div role="contentinfo">
     <p>
-        
-        &copy; 版权所有 2020, @hxt-tg
+        &copy; Copyright 2020, @hxt-tg
 
     </p>
   </div>
-    
-    
-    
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
-    
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -317,6 +315,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {
