@@ -106,6 +106,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id2">通用网络异常类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">缺失节点异常类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">缺失边异常类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">缺失邻居异常类</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="network.html">无向网络类</a></li>
@@ -244,7 +245,7 @@
 </table>
 <dl class="function">
 <dt id="_CPPv3N15NoNodeException15NoNodeExceptionERK4_NId">
-<span id="_CPPv2N15NoNodeException15NoNodeExceptionERK4_NId"></span><span id="NoNodeException::NoNodeException___NIdCR"></span><code class="descname">NoNodeException</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I0E15NoNodeException" title="NoNodeException::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N15NoNodeException15NoNodeExceptionERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N15NoNodeException15NoNodeExceptionERK4_NId"></span><span id="NoNodeException::NoNodeException___NIdCR"></span><code class="descname">NoNodeException</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N15NoNodeException15NoNodeExceptionERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>构造缺失节点异常对象。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -312,6 +313,45 @@
 <p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><span class="pre">NoEdgeException</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">(</span><span class="pre">3</span><span class="pre">,</span> <span class="pre">5</span><span class="pre">,</span> <span class="pre">true</span><span class="pre">)</span></code> 时会显示：</p>
 <div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoEdgeException&lt;int&gt;&#39;
   what():  Network error: No edge from 3 to 5.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>缺失邻居异常类<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv3I0E20NoNeighborsException">
+<span id="_CPPv2I0E20NoNeighborsException"></span>template&lt;class <code class="descname">_NId</code>&gt;<br /><em class="property">class </em><code class="descname">NoNeighborsException</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv316NetworkException" title="NetworkException">NetworkException</a><a class="headerlink" href="#_CPPv3I0E20NoNeighborsException" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>当尝试访问网络中某个节点的邻居（或前序节点、后继节点），不存在抛出该异常。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模板参数:</th><td class="field-body"><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv32Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="_CPPv3N20NoNeighborsException20NoNeighborsExceptionERK4_NId">
+<span id="_CPPv2N20NoNeighborsException20NoNeighborsExceptionERK4_NId"></span><span id="NoNeighborsException::NoNeighborsException___NIdCR"></span><code class="descname">NoNeighborsException</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I0E20NoNeighborsException" title="NoNeighborsException::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N20NoNeighborsException20NoNeighborsExceptionERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>构造缺失邻居异常对象。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 缺失邻居的节点编号</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3I0E20NoNeighborsException" title="NoNeighborsException"><span class="pre">NoNeighborsException</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">(</span><span class="pre">65536</span><span class="pre">)</span></code> 时会显示：</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoNeighborsException&lt;int&gt;&#39;
+  what():  Network error: Node 65536 has no neighbors.
 </pre></div>
 </div>
 </div>

@@ -286,7 +286,7 @@
 
 <dl class="function">
 <dt id="_CPPv3N7Network8add_nodeERK4_NIdRK6_NData">
-<span id="_CPPv2N7Network8add_nodeERK4_NIdRK6_NData"></span><span id="Network::add_node___NIdCR._NDataCR"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> <code class="descname">add_node</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NData">_NData</a> &amp;<em>node_data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network8add_nodeERK4_NIdRK6_NData" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7Network8add_nodeERK4_NIdRK6_NData"></span><span id="Network::add_node___NIdCR._NDataCR"></span>_NId <code class="descname">add_node</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em>, <em class="property">const</em> _NData &amp;<em>node_data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network8add_nodeERK4_NIdRK6_NData" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>向网络中添加一个节点及相应的节点数据。如果这个节点已存在，则用新的节点数据覆盖原有节点数据。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -294,11 +294,11 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
 <li><strong>id</strong> – 待加入的节点编号</li>
-<li><strong>node_data</strong> – 待加入节点的节点数据，如果未给定则使用 <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NData"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_NData</span></code></a> 类型的默认构造器构造对象赋值。</li>
+<li><strong>node_data</strong> – 待加入节点的节点数据，如果未给定则使用 <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_NData</span></code> 类型的默认构造器构造对象赋值。</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first last">成功加入的节点编号 <a class="reference internal" href="#_CPPv3N7Network8add_nodeERK4_NIdRK6_NData" title="Network::add_node::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a></p>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first last">成功加入的节点编号 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></p>
 </td>
 </tr>
 </tbody>
@@ -307,8 +307,8 @@
 
 <dl class="function">
 <dt id="_CPPv3N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData">
-<span id="_CPPv2N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData"></span><span id="Network::add_edge___NIdCR._NIdCR._EDataCR"></span>void <code class="descname">add_edge</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_EData">_EData</a> &amp;<em>edge_data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData" title="永久链接至目标">¶</a><br /></dt>
-<dd><p>向网络中添加一条边及相应的边数据。如果这条边已存在，则用新的边数据覆盖原有边数据。如果该边上的两个节点中，任意一个节点不存在，则自动使用 <a class="reference internal" href="#_CPPv3N7Network8add_nodeERK4_NIdRK6_NData" title="Network::add_node"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">add_node</span></code></a> 函数创建这个点，并用 <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NData"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_NData</span></code></a> 构造节点数据。</p>
+<span id="_CPPv2N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData"></span><span id="Network::add_edge___NIdCR._NIdCR._EDataCR"></span>void <code class="descname">add_edge</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em>, <em class="property">const</em> _EData &amp;<em>edge_data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network8add_edgeERK4_NIdRK4_NIdRK6_EData" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>向网络中添加一条边及相应的边数据。如果这条边已存在，则用新的边数据覆盖原有边数据。如果该边上的两个节点中，任意一个节点不存在，则自动使用 <a class="reference internal" href="#_CPPv3N7Network8add_nodeERK4_NIdRK6_NData" title="Network::add_node"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">add_node</span></code></a> 函数创建这个点，并用 <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_NData</span></code> 构造节点数据。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -316,7 +316,7 @@
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
 <li><strong>id1</strong> – 待加入边的第一个节点编号</li>
 <li><strong>id2</strong> – 待加入边的第二个节点编号</li>
-<li><strong>edge_data</strong> – 待加入边的边数据，如果未给定则使用 <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_EData"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_EData</span></code></a> 类型的默认构造器构造对象赋值。</li>
+<li><strong>edge_data</strong> – 待加入边的边数据，如果未给定则使用 <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_EData</span></code> 类型的默认构造器构造对象赋值。</li>
 </ul>
 </td>
 </tr>
@@ -326,7 +326,7 @@
 
 <dl class="function">
 <dt id="_CPPv3N7Network11remove_edgeERK4_NIdRK4_NId">
-<span id="_CPPv2N7Network11remove_edgeERK4_NIdRK4_NId"></span><span id="Network::remove_edge___NIdCR._NIdCR"></span>void <code class="descname">remove_edge</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network11remove_edgeERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7Network11remove_edgeERK4_NIdRK4_NId"></span><span id="Network::remove_edge___NIdCR._NIdCR"></span>void <code class="descname">remove_edge</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network11remove_edgeERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>从网络中移除一条边，相应边的边数据也会被清除。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -339,7 +339,7 @@
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">抛出:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3N7Network11remove_edgeERK4_NIdRK4_NId" title="Network::remove_edge::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 或 <a class="reference internal" href="#_CPPv3N7Network11remove_edgeERK4_NIdRK4_NId" title="Network::remove_edge::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 不存在</li>
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 或 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 不存在</li>
 <li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><strong>NoEdgeException</strong></a> – 待删除边不存在</li>
 </ul>
 </td>
@@ -350,7 +350,7 @@
 
 <dl class="function">
 <dt id="_CPPv3N7Network11remove_nodeERK4_NId">
-<span id="_CPPv2N7Network11remove_nodeERK4_NId"></span><span id="Network::remove_node___NIdCR"></span>void <code class="descname">remove_node</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network11remove_nodeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7Network11remove_nodeERK4_NId"></span><span id="Network::remove_node___NIdCR"></span>void <code class="descname">remove_node</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network11remove_nodeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>从网络中移除节点，并移除所有与其相连的边，存储在上面的节点数据也会被清除。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -358,7 +358,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 待加入的节点编号</td>
 </tr>
-<tr class="field-even field"><th class="field-name">抛出:</th><td class="field-body"><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3N7Network11remove_nodeERK4_NId" title="Network::remove_node::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 不存在</td>
+<tr class="field-even field"><th class="field-name">抛出:</th><td class="field-body"><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 不存在</td>
 </tr>
 </tbody>
 </table>
@@ -366,7 +366,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network8has_nodeERK4_NId">
-<span id="_CPPv2NK7Network8has_nodeERK4_NId"></span><span id="Network::has_node___NIdCRC"></span>bool <code class="descname">has_node</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network8has_nodeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network8has_nodeERK4_NId"></span><span id="Network::has_node___NIdCRC"></span>bool <code class="descname">has_node</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network8has_nodeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>判断网络中是否存在指定节点。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -374,7 +374,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 待判断的节点编号</td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">如果网络中存在节点 <a class="reference internal" href="#_CPPv3NK7Network8has_nodeERK4_NId" title="Network::has_node::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> ，返回 <code class="docutils literal notranslate"><span class="pre">true</span></code> ，否则返回 <code class="docutils literal notranslate"><span class="pre">false</span></code> 。</td>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">如果网络中存在节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> ，返回 <code class="docutils literal notranslate"><span class="pre">true</span></code> ，否则返回 <code class="docutils literal notranslate"><span class="pre">false</span></code> 。</td>
 </tr>
 </tbody>
 </table>
@@ -382,7 +382,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network8has_edgeERK4_NIdRK4_NId">
-<span id="_CPPv2NK7Network8has_edgeERK4_NIdRK4_NId"></span><span id="Network::has_edge___NIdCR._NIdCRC"></span>bool <code class="descname">has_edge</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network8has_edgeERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network8has_edgeERK4_NIdRK4_NId"></span><span id="Network::has_edge___NIdCR._NIdCRC"></span>bool <code class="descname">has_edge</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network8has_edgeERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>判断网络中是否存在指定边。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -394,7 +394,7 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first last">如果网络中节点 <a class="reference internal" href="#_CPPv3NK7Network8has_edgeERK4_NIdRK4_NId" title="Network::has_edge::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 与节点 <a class="reference internal" href="#_CPPv3NK7Network8has_edgeERK4_NIdRK4_NId" title="Network::has_edge::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 有连边，返回 <code class="docutils literal notranslate"><span class="pre">true</span></code> ，否则返回 <code class="docutils literal notranslate"><span class="pre">false</span></code> 。如果任意一个节点不存在也返回 <code class="docutils literal notranslate"><span class="pre">false</span></code> 。</p>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first last">如果网络中节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 与节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 有连边，返回 <code class="docutils literal notranslate"><span class="pre">true</span></code> ，否则返回 <code class="docutils literal notranslate"><span class="pre">false</span></code> 。如果任意一个节点不存在也返回 <code class="docutils literal notranslate"><span class="pre">false</span></code> 。</p>
 </td>
 </tr>
 </tbody>
@@ -403,13 +403,13 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network11is_neighborERK4_NIdRK4_NId">
-<span id="_CPPv2NK7Network11is_neighborERK4_NIdRK4_NId"></span><span id="Network::is_neighbor___NIdCR._NIdCRC"></span>bool <code class="descname">is_neighbor</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network11is_neighborERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network11is_neighborERK4_NIdRK4_NId"></span><span id="Network::is_neighbor___NIdCR._NIdCRC"></span>bool <code class="descname">is_neighbor</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network11is_neighborERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>同 <a class="reference internal" href="#_CPPv3NK7Network8has_edgeERK4_NIdRK4_NId" title="Network::has_edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">has_edge</span></code></a> 方法。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N7Network4nodeERK4_NId">
-<span id="_CPPv2N7Network4nodeERK4_NId"></span><span id="Network::node___NIdCR"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NData">_NData</a> &amp;<code class="descname">node</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network4nodeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7Network4nodeERK4_NId"></span><span id="Network::node___NIdCR"></span>_NData &amp;<code class="descname">node</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network4nodeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>访问节点数据，可以读写。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -417,9 +417,9 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 节点编号</td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">节点 <a class="reference internal" href="#_CPPv3N7Network4nodeERK4_NId" title="Network::node::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 上的节点数据对象的引用</td>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 上的节点数据对象的引用</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3N7Network4nodeERK4_NId" title="Network::node::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 不存在</td>
+<tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 不存在</td>
 </tr>
 </tbody>
 </table>
@@ -427,7 +427,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network13get_node_dataERK4_NId">
-<span id="_CPPv2NK7Network13get_node_dataERK4_NId"></span><span id="Network::get_node_data___NIdCRC"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NData">_NData</a> <code class="descname">get_node_data</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network13get_node_dataERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network13get_node_dataERK4_NId"></span><span id="Network::get_node_data___NIdCRC"></span>_NData <code class="descname">get_node_data</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network13get_node_dataERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>访问点数据的一份拷贝，修改该函数返回的变量不会改变 <a class="reference internal" href="#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 对象存储的点数据。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -435,9 +435,9 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 节点编号</td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">节点 <a class="reference internal" href="#_CPPv3NK7Network13get_node_dataERK4_NId" title="Network::get_node_data::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 上的节点数据对象的拷贝</td>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 上的节点数据对象的拷贝</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3NK7Network13get_node_dataERK4_NId" title="Network::get_node_data::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 不存在</td>
+<tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 不存在</td>
 </tr>
 </tbody>
 </table>
@@ -445,7 +445,7 @@
 
 <dl class="function">
 <dt id="_CPPv3N7Network4edgeERK4_NIdRK4_NId">
-<span id="_CPPv2N7Network4edgeERK4_NIdRK4_NId"></span><span id="Network::edge___NIdCR._NIdCR"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_EData">_EData</a> &amp;<code class="descname">edge</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7Network4edgeERK4_NIdRK4_NId"></span><span id="Network::edge___NIdCR._NIdCR"></span>_EData &amp;<code class="descname">edge</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>访问边数据，可以读写。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -457,12 +457,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">节点 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 与节点 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 连边上的边数据对象引用</p>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 与节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 连边上的边数据对象引用</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 或 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 不存在</li>
-<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><strong>NoEdgeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 与节点 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 间的连边不存在</li>
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 或 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 不存在</li>
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><strong>NoEdgeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 与节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 间的连边不存在</li>
 </ul>
 </td>
 </tr>
@@ -472,7 +472,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId">
-<span id="_CPPv2NK7Network13get_edge_dataERK4_NIdRK4_NId"></span><span id="Network::get_edge_data___NIdCR._NIdCRC"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_EData">_EData</a> <code class="descname">get_edge_data</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network13get_edge_dataERK4_NIdRK4_NId"></span><span id="Network::get_edge_data___NIdCR._NIdCRC"></span>_EData <code class="descname">get_edge_data</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>访问边数据的一份拷贝，修改该函数返回的变量不会改变 <a class="reference internal" href="#_CPPv3I000E7Network" title="Network"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Network</span></code></a> 对象存储的边数据。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -484,12 +484,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">节点 <a class="reference internal" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="Network::get_edge_data::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 与节点 <a class="reference internal" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="Network::get_edge_data::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 连边上的边数据的拷贝</p>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 与节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 连边上的边数据的拷贝</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="Network::get_edge_data::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 或 <a class="reference internal" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="Network::get_edge_data::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 不存在</li>
-<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><strong>NoEdgeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="Network::get_edge_data::id1"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code></a> 与节点 <a class="reference internal" href="#_CPPv3NK7Network13get_edge_dataERK4_NIdRK4_NId" title="Network::get_edge_data::id2"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code></a> 间的连边不存在</li>
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 或 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 不存在</li>
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><strong>NoEdgeException</strong></a> – 节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id1</span></code> 与节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id2</span></code> 间的连边不存在</li>
 </ul>
 </td>
 </tr>
@@ -541,7 +541,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network6degreeERK4_NId">
-<span id="_CPPv2NK7Network6degreeERK4_NId"></span><span id="Network::degree___NIdCRC"></span>int <code class="descname">degree</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network6degreeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network6degreeERK4_NId"></span><span id="Network::degree___NIdCRC"></span>int <code class="descname">degree</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network6degreeERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>获取节点的度。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -549,7 +549,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 节点编号</td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">节点 <a class="reference internal" href="#_CPPv3NK7Network6degreeERK4_NId" title="Network::degree::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 的度（若该点不存在则返回 <code class="docutils literal notranslate"><span class="pre">0</span></code> ）</td>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 的度（若该点不存在则返回 <code class="docutils literal notranslate"><span class="pre">0</span></code> ）</td>
 </tr>
 </tbody>
 </table>
@@ -557,7 +557,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network9neighborsERK4_NId">
-<span id="_CPPv2NK7Network9neighborsERK4_NId"></span><span id="Network::neighbors___NIdCRC"></span>std::vector&lt;<a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a>&gt; <code class="descname">neighbors</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network9neighborsERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network9neighborsERK4_NId"></span><span id="Network::neighbors___NIdCRC"></span>std::vector&lt;_NId&gt; <code class="descname">neighbors</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network9neighborsERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>获取该节点的相邻节点的编号数组。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -565,7 +565,31 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 节点编号</td>
 </tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">与节点 <a class="reference internal" href="#_CPPv3NK7Network9neighborsERK4_NId" title="Network::neighbors::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 相邻的节点编号数组。（若该点不存在则返回空数组）</td>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">与节点 <code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code> 相邻的节点编号数组。（若该点不存在则返回空数组）</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK7Network15random_neighborERK4_NId">
+<span id="_CPPv2NK7Network15random_neighborERK4_NId"></span><span id="Network::random_neighbor___NIdCRC"></span>_NId <code class="descname">random_neighbor</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network15random_neighborERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>获取该节点的一个随机邻居。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><p class="first"><strong>id</strong> – 节点编号</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">节点 <a class="reference internal" href="#_CPPv3NK7Network15random_neighborERK4_NId" title="Network::random_neighbor::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 的一个随机邻居</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">抛出:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E15NoNodeException" title="NoNodeException"><strong>NoNodeException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3NK7Network15random_neighborERK4_NId" title="Network::random_neighbor::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 不存在</li>
+<li><a class="reference internal" href="exceptions.html#_CPPv3I0E20NoNeighborsException" title="NoNeighborsException"><strong>NoNeighborsException</strong></a> – 节点 <a class="reference internal" href="#_CPPv3NK7Network15random_neighborERK4_NId" title="Network::random_neighbor::id"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">id</span></code></a> 没有邻居</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -573,7 +597,7 @@
 
 <dl class="function">
 <dt id="_CPPv3NK7Network5nodesEv">
-<span id="_CPPv2NK7Network5nodesEv"></span><span id="Network::nodesC"></span>std::vector&lt;<a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a>&gt; <code class="descname">nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network5nodesEv" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2NK7Network5nodesEv"></span><span id="Network::nodesC"></span>std::vector&lt;_NId&gt; <code class="descname">nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network5nodesEv" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>获取所有节点编号的数组。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -588,7 +612,7 @@
 <dl class="function">
 <dt id="_CPPv3NK7Network5edgesEv">
 <span id="_CPPv2NK7Network5edgesEv"></span><span id="Network::edgesC"></span>_ESetType <code class="descname">edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK7Network5edgesEv" title="永久链接至目标">¶</a><br /></dt>
-<dd><p>获取所有边的点对集合。该集合中的每一项（设为变量 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><span class="pre">edge</span></a></code>）都是一条边，使用 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><span class="pre">edge</span></a><span class="pre">.</span><span class="pre">first</span></code> 获取这条边较小的一个节点的编号，使用 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><span class="pre">edge</span></a><span class="pre">.</span><span class="pre">second</span></code> 获取另一个节点编号。节点编号的大小比较依赖于具体编号类型 <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_NId</span></code></a> 的实现，例如 <a class="reference internal" href="types.html#_CPPv32Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a> 类型取无符号整数较小的一个， <code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span></code> 取长度较短或字母序靠前的一个字符串等。</p>
+<dd><p>获取所有边的点对集合。该集合中的每一项（设为变量 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><span class="pre">edge</span></a></code>）都是一条边，使用 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><span class="pre">edge</span></a><span class="pre">.</span><span class="pre">first</span></code> 获取这条边较小的一个节点的编号，使用 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><span class="pre">edge</span></a><span class="pre">.</span><span class="pre">second</span></code> 获取另一个节点编号。节点编号的大小比较依赖于具体编号类型 <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">_NId</span></code> 的实现，例如 <a class="reference internal" href="types.html#_CPPv32Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a> 类型取无符号整数较小的一个， <code class="docutils literal notranslate"><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span></code> 取长度较短或字母序靠前的一个字符串等。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -601,13 +625,13 @@
 
 <dl class="function">
 <dt id="_CPPv3N7NetworkixERK4_NId">
-<span id="_CPPv2N7NetworkixERK4_NId"></span><span id="Network::subscript-operator___NIdCR"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NData">_NData</a> &amp;<code class="descname">operator[]</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7NetworkixERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7NetworkixERK4_NId"></span><span id="Network::subscript-operator___NIdCR"></span>_NData &amp;<code class="descname">operator[]</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7NetworkixERK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>网络节点数据的便携访问，同 <a class="reference internal" href="#_CPPv3N7Network4nodeERK4_NId" title="Network::node"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">node</span></code></a> 方法。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N7NetworkclERK4_NIdRK4_NId">
-<span id="_CPPv2N7NetworkclERK4_NIdRK4_NId"></span><span id="Network::call-operator___NIdCR._NIdCR"></span><a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_EData">_EData</a> &amp;<code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv3I000E7Network" title="Network::_NId">_NId</a> &amp;<em>id2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7NetworkclERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<span id="_CPPv2N7NetworkclERK4_NIdRK4_NId"></span><span id="Network::call-operator___NIdCR._NIdCR"></span>_EData &amp;<code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id1</em>, <em class="property">const</em> _NId &amp;<em>id2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N7NetworkclERK4_NIdRK4_NId" title="永久链接至目标">¶</a><br /></dt>
 <dd><p>网络边数据的便携访问，同 <a class="reference internal" href="#_CPPv3N7Network4edgeERK4_NIdRK4_NId" title="Network::edge"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">edge</span></code></a> 方法。</p>
 </dd></dl>
 
