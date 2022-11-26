@@ -1,101 +1,50 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>网络异常类 &mdash; CimNet 0.1.4 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'0.1.4',
-              LANGUAGE:'zh_CN',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="无向网络类" href="network.html" />
     <link rel="prev" title="随机数生成器" href="rng.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #d44a1c" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> CimNet
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 latest
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜索文档" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">文档目录</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">文档目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">安装 CimNet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">CimNet 使用说明</a></li>
@@ -118,293 +67,214 @@
 <li class="toctree-l1"><a class="reference internal" href="../credits-license.html">开发者协议</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单"  style="background: #d44a1c" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">CimNet</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="intro.html">CimNet 参考文档</a> &raquo;</li>
-        
-      <li>网络异常类</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="intro.html">CimNet 参考文档</a></li>
+      <li class="breadcrumb-item active">网络异常类</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="reference-exceptions">
-<span id="id1"></span><h1>网络异常类<a class="headerlink" href="#reference-exceptions" title="永久链接至标题">¶</a></h1>
+             
+  <section id="reference-exceptions">
+<span id="id1"></span><h1>网络异常类<a class="headerlink" href="#reference-exceptions" title="此标题的永久链接"></a></h1>
 <p>网络异常类在 <code class="file docutils literal notranslate"><span class="pre">cimnet/_exception.h</span></code> 内定义，用于标识被抛出的网络相关异常。</p>
-<div class="section" id="id2">
-<h2>通用网络异常类<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="class">
-<dt id="_CPPv316NetworkException">
-<span id="_CPPv216NetworkException"></span><span id="NetworkException"></span><em class="property">class </em><code class="descname">NetworkException</code> : <em class="property">public</em> std::exception<a class="headerlink" href="#_CPPv316NetworkException" title="永久链接至目标">¶</a><br /></dt>
+<section id="id2">
+<h2>通用网络异常类<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv416NetworkException">
+<span id="_CPPv316NetworkException"></span><span id="_CPPv216NetworkException"></span><span id="NetworkException"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NetworkException</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">exception</span></span><a class="headerlink" href="#_CPPv416NetworkException" title="永久链接至目标"></a><br /></dt>
 <dd><p>构造网络异常的基类。</p>
-<dl class="function">
-<dt id="_CPPv3N16NetworkException16NetworkExceptionERKNSt6stringE">
-<span id="_CPPv2N16NetworkException16NetworkExceptionERKNSt6stringE"></span><span id="NetworkException::NetworkException__ssCR"></span><code class="descname">NetworkException</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N16NetworkException16NetworkExceptionERKNSt6stringE" title="永久链接至目标">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16NetworkException16NetworkExceptionERKNSt6stringE">
+<span id="_CPPv3N16NetworkException16NetworkExceptionERKNSt6stringE"></span><span id="_CPPv2N16NetworkException16NetworkExceptionERKNSt6stringE"></span><span id="NetworkException::NetworkException__ssCR"></span><span class="sig-name descname"><span class="n"><span class="pre">NetworkException</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">info</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16NetworkException16NetworkExceptionERKNSt6stringE" title="永久链接至目标"></a><br /></dt>
 <dd><p>根据报错信息构造网络异常对象。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>info</strong> – 网络异常信息字符串</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>info</strong> – 网络异常信息字符串</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv3N16NetworkException8set_infoERKNSt6stringE">
-<span id="_CPPv2N16NetworkException8set_infoERKNSt6stringE"></span><span id="NetworkException::set_info__ssCR"></span>void <code class="descname">set_info</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N16NetworkException8set_infoERKNSt6stringE" title="永久链接至目标">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16NetworkException8set_infoERKNSt6stringE">
+<span id="_CPPv3N16NetworkException8set_infoERKNSt6stringE"></span><span id="_CPPv2N16NetworkException8set_infoERKNSt6stringE"></span><span id="NetworkException::set_info__ssCR"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_info</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">info</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16NetworkException8set_infoERKNSt6stringE" title="永久链接至目标"></a><br /></dt>
 <dd><p>修改异常对象的报错信息。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>info</strong> – 网络异常信息字符串</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>info</strong> – 网络异常信息字符串</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv316NetworkException" title="NetworkException"><span class="pre">NetworkException</span></a><span class="pre">(</span><span class="pre">&quot;Cannot</span> <span class="pre">create</span> <span class="pre">network.&quot;</span><span class="pre">)</span></code> 时会显示：</p>
+<p class="admonition-title">备注</p>
+<p>抛出异常 <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv416NetworkException" title="NetworkException"><span class="n">NetworkException</span></a><span class="p">(</span><span class="s">&quot;Cannot create network.&quot;</span><span class="p">)</span></span> 时会显示：</p>
 <p>（gcc on linux环境）</p>
-<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NetworkException&#39;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NetworkException&#39;
   what():  Network error: Cannot create network.
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>缺失节点异常类<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<dl class="class">
-<dt id="_CPPv3I0E15NoNodeException">
-<span id="_CPPv2I0E15NoNodeException"></span>template&lt;class <code class="descname">_NId</code>&gt;<br /><em class="property">class </em><code class="descname">NoNodeException</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv316NetworkException" title="NetworkException">NetworkException</a><a class="headerlink" href="#_CPPv3I0E15NoNodeException" title="永久链接至目标">¶</a><br /></dt>
+</section>
+<section id="id3">
+<h2>缺失节点异常类<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0E15NoNodeException">
+<span id="_CPPv3I0E15NoNodeException"></span><span id="_CPPv2I0E15NoNodeException"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_NId</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoNodeException</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416NetworkException" title="NetworkException"><span class="n"><span class="pre">NetworkException</span></span></a><a class="headerlink" href="#_CPPv4I0E15NoNodeException" title="永久链接至目标"></a><br /></dt>
 <dd><p>当尝试访问网络中不存在的节点时抛出该异常。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">模板参数:</th><td class="field-body"><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv32Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</td>
-</tr>
-</tbody>
-</table>
-<dl class="function">
-<dt id="_CPPv3N15NoNodeException15NoNodeExceptionERK4_NId">
-<span id="_CPPv2N15NoNodeException15NoNodeExceptionERK4_NId"></span><span id="NoNodeException::NoNodeException___NIdCR"></span><code class="descname">NoNodeException</code><span class="sig-paren">(</span><em class="property">const</em> _NId &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N15NoNodeException15NoNodeExceptionERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><p><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv42Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</p>
+</dd>
+</dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15NoNodeException15NoNodeExceptionERK4_NId">
+<span id="_CPPv3N15NoNodeException15NoNodeExceptionERK4_NId"></span><span id="_CPPv2N15NoNodeException15NoNodeExceptionERK4_NId"></span><span id="NoNodeException::NoNodeException___NIdCR"></span><span class="sig-name descname"><span class="n"><span class="pre">NoNodeException</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E15NoNodeException" title="NoNodeException::_NId"><span class="n"><span class="pre">_NId</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15NoNodeException15NoNodeExceptionERK4_NId" title="永久链接至目标"></a><br /></dt>
 <dd><p>构造缺失节点异常对象。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 缺失节点的编号</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>id</strong> – 缺失节点的编号</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3I0E15NoNodeException" title="NoNodeException"><span class="pre">NoNodeException</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">(</span><span class="pre">65536</span><span class="pre">)</span></code> 时会显示：</p>
-<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoNodeException&lt;int&gt;&#39;
+<p class="admonition-title">备注</p>
+<p>抛出异常 <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv4I0E15NoNodeException" title="NoNodeException"><span class="n">NoNodeException</span></a><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="p">(</span><span class="m">65536</span><span class="p">)</span></span> 时会显示：</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoNodeException&lt;int&gt;&#39;
   what():  Network error: Node 65536 not found.
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>缺失边异常类<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<dl class="class">
-<dt id="_CPPv3I0E15NoEdgeException">
-<span id="_CPPv2I0E15NoEdgeException"></span>template&lt;class <code class="descname">_NId</code>&gt;<br /><em class="property">class </em><code class="descname">NoEdgeException</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv316NetworkException" title="NetworkException">NetworkException</a><a class="headerlink" href="#_CPPv3I0E15NoEdgeException" title="永久链接至目标">¶</a><br /></dt>
+</section>
+<section id="id4">
+<h2>缺失边异常类<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0E15NoEdgeException">
+<span id="_CPPv3I0E15NoEdgeException"></span><span id="_CPPv2I0E15NoEdgeException"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_NId</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoEdgeException</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416NetworkException" title="NetworkException"><span class="n"><span class="pre">NetworkException</span></span></a><a class="headerlink" href="#_CPPv4I0E15NoEdgeException" title="永久链接至目标"></a><br /></dt>
 <dd><p>当尝试访问网络中不存在的边时抛出该异常。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">模板参数:</th><td class="field-body"><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv32Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</td>
-</tr>
-</tbody>
-</table>
-<dl class="function">
-<dt>
-<code class="descname">NoEdgeException(const _NId &amp;id1, const _NId &amp;id2, bool is_directed=false);</code></dt>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><p><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv42Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</p>
+</dd>
+</dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15NoEdgeException15NoEdgeExceptionERK4_NIdRK4_NIdb">
+<span id="_CPPv3N15NoEdgeException15NoEdgeExceptionERK4_NIdRK4_NIdb"></span><span id="_CPPv2N15NoEdgeException15NoEdgeExceptionERK4_NIdRK4_NIdb"></span><span id="NoEdgeException::NoEdgeException___NIdCR._NIdCR.b"></span><span class="sig-name descname"><span class="n"><span class="pre">NoEdgeException</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E15NoEdgeException" title="NoEdgeException::_NId"><span class="n"><span class="pre">_NId</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">id1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E15NoEdgeException" title="NoEdgeException::_NId"><span class="n"><span class="pre">_NId</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">id2</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">is_directed</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4N15NoEdgeException15NoEdgeExceptionERK4_NIdRK4_NIdb" title="永久链接至目标"></a><br /></dt>
 <dd><p>构造缺失边异常对象。</p>
 </dd></dl>
 
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
-<li><strong>id1</strong> – 缺失边的第一个节点编号</li>
-<li><strong>id2</strong> – 缺失边的第二个节点编号</li>
-<li><strong>is_directed</strong> – 该缺失边是否为有向边（默认为无向边）</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Param id1</dt>
+<dd class="field-odd"><p>缺失边的第一个节点编号</p>
+</dd>
+<dt class="field-even">Param id2</dt>
+<dd class="field-even"><p>缺失边的第二个节点编号</p>
+</dd>
+<dt class="field-odd">Param is_directed</dt>
+<dd class="field-odd"><p>该缺失边是否为有向边（默认为无向边）</p>
+</dd>
+</dl>
 </dd></dl>
 
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><span class="pre">NoEdgeException</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">(</span><span class="pre">3</span><span class="pre">,</span> <span class="pre">5</span><span class="pre">)</span></code> 时会显示：</p>
+<p class="admonition-title">备注</p>
+<p>抛出异常 <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv4I0E15NoEdgeException" title="NoEdgeException"><span class="n">NoEdgeException</span></a><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span></span> 时会显示：</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoEdgeException&lt;int&gt;&#39;
   what():  Network error: No edge between 3 and 5.
 </pre></div>
 </div>
-<p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3I0E15NoEdgeException" title="NoEdgeException"><span class="pre">NoEdgeException</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">(</span><span class="pre">3</span><span class="pre">,</span> <span class="pre">5</span><span class="pre">,</span> <span class="pre">true</span><span class="pre">)</span></code> 时会显示：</p>
-<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoEdgeException&lt;int&gt;&#39;
+<p>抛出异常 <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv4I0E15NoEdgeException" title="NoEdgeException"><span class="n">NoEdgeException</span></a><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">)</span></span> 时会显示：</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoEdgeException&lt;int&gt;&#39;
   what():  Network error: No edge from 3 to 5.
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="id5">
-<h2>缺失邻居异常类<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<dl class="class">
-<dt id="_CPPv3I0E20NoNeighborsException">
-<span id="_CPPv2I0E20NoNeighborsException"></span>template&lt;class <code class="descname">_NId</code>&gt;<br /><em class="property">class </em><code class="descname">NoNeighborsException</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv316NetworkException" title="NetworkException">NetworkException</a><a class="headerlink" href="#_CPPv3I0E20NoNeighborsException" title="永久链接至目标">¶</a><br /></dt>
+</section>
+<section id="id5">
+<h2>缺失邻居异常类<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0E20NoNeighborsException">
+<span id="_CPPv3I0E20NoNeighborsException"></span><span id="_CPPv2I0E20NoNeighborsException"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_NId</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoNeighborsException</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416NetworkException" title="NetworkException"><span class="n"><span class="pre">NetworkException</span></span></a><a class="headerlink" href="#_CPPv4I0E20NoNeighborsException" title="永久链接至目标"></a><br /></dt>
 <dd><p>当尝试访问网络中某个节点的邻居（或前序节点、后继节点），不存在抛出该异常。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">模板参数:</th><td class="field-body"><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv32Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</td>
-</tr>
-</tbody>
-</table>
-<dl class="function">
-<dt id="_CPPv3N20NoNeighborsException20NoNeighborsExceptionERK4_NId">
-<span id="_CPPv2N20NoNeighborsException20NoNeighborsExceptionERK4_NId"></span><span id="NoNeighborsException::NoNeighborsException___NIdCR"></span><code class="descname">NoNeighborsException</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv3I0E20NoNeighborsException" title="NoNeighborsException::_NId">_NId</a> &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N20NoNeighborsException20NoNeighborsExceptionERK4_NId" title="永久链接至目标">¶</a><br /></dt>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><p><strong>_NId</strong> – 节点编号类型（默认为 <a class="reference internal" href="types.html#_CPPv42Id" title="Id"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Id</span></code></a>）</p>
+</dd>
+</dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20NoNeighborsException20NoNeighborsExceptionERK4_NId">
+<span id="_CPPv3N20NoNeighborsException20NoNeighborsExceptionERK4_NId"></span><span id="_CPPv2N20NoNeighborsException20NoNeighborsExceptionERK4_NId"></span><span id="NoNeighborsException::NoNeighborsException___NIdCR"></span><span class="sig-name descname"><span class="n"><span class="pre">NoNeighborsException</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E20NoNeighborsException" title="NoNeighborsException::_NId"><span class="n"><span class="pre">_NId</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20NoNeighborsException20NoNeighborsExceptionERK4_NId" title="永久链接至目标"></a><br /></dt>
 <dd><p>构造缺失邻居异常对象。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>id</strong> – 缺失邻居的节点编号</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>id</strong> – 缺失邻居的节点编号</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>抛出异常 <code class="docutils literal notranslate"><a class="reference internal" href="#_CPPv3I0E20NoNeighborsException" title="NoNeighborsException"><span class="pre">NoNeighborsException</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">(</span><span class="pre">65536</span><span class="pre">)</span></code> 时会显示：</p>
-<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoNeighborsException&lt;int&gt;&#39;
+<p class="admonition-title">备注</p>
+<p>抛出异常 <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv4I0E20NoNeighborsException" title="NoNeighborsException"><span class="n">NoNeighborsException</span></a><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="p">(</span><span class="m">65536</span><span class="p">)</span></span> 时会显示：</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>terminate called after throwing an instance of &#39;NoNeighborsException&lt;int&gt;&#39;
   what():  Network error: Node 65536 has no neighbors.
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="network.html" class="btn btn-neutral float-right" title="无向网络类" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="rng.html" class="btn btn-neutral float-left" title="随机数生成器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="rng.html" class="btn btn-neutral float-left" title="随机数生成器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="network.html" class="btn btn-neutral float-right" title="无向网络类" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, @hxt-tg
-
-    </p>
+    <p>&#169; 版权所有 2022, @hxt-tg.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
